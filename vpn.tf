@@ -40,4 +40,3 @@ EOF
  #   command = "git clone -b master https://github.com/andriipanchuk/vpn"
  #   }
 #}
-
