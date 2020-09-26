@@ -29,14 +29,8 @@ resource "google_compute_instance" "vm_instance" {
 
 metadata_startup_script = <<EOF
   #!/bin/bash
-  git clone -b master https://github.com/andriipanchuk/vpn "vpnsetup.sh"
-  cd /
-  sudo sh vpnsetup.sh
+  git clone https://github.com/andriipanchuk/vpnset
+  sudo sh vpnset/vpnsetup.sh
  
 EOF
 }
-#resource "null_resource" "login" {
- #   provisioner "local-exec" {
- #   command = "git clone -b master https://github.com/andriipanchuk/vpn"
- #   }
-#}
