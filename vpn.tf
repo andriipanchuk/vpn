@@ -29,8 +29,8 @@ resource "google_compute_instance" "vm_instance" {
 
 metadata_startup_script = <<EOF
   #!/bin/bash
-  git clone https://github.com/andriipanchuk/vpnset
-  sudo sh vpnset/vpnsetup.sh
+  git clone https://github.com/andriipanchuk/vpnset /usr/local/sbin
+  sudo sh /usr/local/sbin/vpnsetup.sh
  
 EOF
 }
