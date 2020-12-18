@@ -1,0 +1,4 @@
+Hi guys. I have the solution for all of you who cannot connect to the VPN. As we are using L2TP VPN with shared key, for Windows PC it is necessary to add the following regedit key:
+Open regedit. Go to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PolicyAgent. Here you should have some existing keys (DependOnService, DisplayName, ErrorControl.....) Right click and add a new DWORD 32 bits key. Name it exactly like this : AssumeUDPEncapsulationContextOnSendRule
+After you added this key. Right click on it > Modify > Make sure the hexadecimal is checked, and put the value 2 instead of 0.
+Now restart your PC.
