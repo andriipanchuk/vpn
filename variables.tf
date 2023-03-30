@@ -4,12 +4,17 @@ variable "instance_name" {
 }
 
 variable "google_project_id" {
-  default = "airy-charmer-289323"
+  default = "turing-energy-378521"
   description = "- (Optional) That is gonna be used for our particular project ID in GCP"  
 }
 
 variable "zone" {
-  default = "us-central1-a"
+  default = "us-central1-c"
+  description = "- (Optional) Here we are specified in which A-Z suppose to be our bastion host"  
+}
+
+variable "region" {
+  default = "us-central1"
   description = "- (Optional) Here we are specified in which A-Z suppose to be our bastion host"  
 }
 
@@ -32,7 +37,7 @@ variable "gce_ssh_pub_key_file" {
   description = "- (Optional) Here is will be a choosing an access method to bastion host"  
 }
 
-variable "instance_disk_zie" {
+variable "instance_disk_size" {
   default = "10" 
   description = "- (Optional) The disk size for the bastion host <example 30 40 50 >"
 }
